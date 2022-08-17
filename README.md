@@ -25,7 +25,7 @@
 | category_id        | integer    | null: false                    |
 | situation_id       | integer    | null: false                    |
 | delivery_fee_id    | integer    | null: false                    |
-| area_id            | integer    | null: false                    |
+| prefecture_id      | integer    | null: false                    |
 | days_id            | integer    | null: false                    |
 | price              | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
@@ -45,8 +45,8 @@
 
 ### Association
 
-- belong_to :users
-- belong_to :items
+- belongs_to :user
+- belongs_to :item
 - has_one :shipping_addresses
 
 ## shipping_addresses テーブル
