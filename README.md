@@ -41,25 +41,24 @@
 | ------------------ | ---------- | ------------------------------ |
 | user               | references | null: false, foreign_key: true |
 | item               | references | null: false, foreign_key: true |
-| shipping_address   | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
 - belongs_to :item
-- has_one :shipping_addresses
+- has_one :shipping_address
 
 ## shipping_addresses テーブル
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
 | post_code          | string     | null: false                    |
-| prefecture         | reference  | null: false, foreign_key: true |
+| prefecture_id      | reference  | null: false, foreign_key: true |
 | municipality       | string     | null: false                    |
 | address            | string     | null: false                    |
 | building           | string     |                                |
 | number             | string     | null: false                    |
-| item               | references | null: false, foreign_key: true |
+| purchase           | references | null: false, foreign_key: true |
 
 ### Association
 
